@@ -1,3 +1,256 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F6F3F3;
+}
+
+.parent {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:  250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px ;
+    padding: 20px;
+    grid-template-areas: 
+        "div1 div1 div1 div1"
+        "div1 div1 div1 div1"
+        "div1 div1 div1 div1"
+        "div2 div2 div4 div4"
+        "div2 div2 div4 div4"
+        "div2 div2 div5 div5"
+        "div3 div3 div5 div5"
+        "div3 div3 div5 div5"
+        "div6 div6 div6 div6"
+        "div6 div6 div6 div6"
+        "div7 div7 div7 div7"
+        "div7 div7 div7 div7"
+        "div8 div8 div9 div9"
+        "div8 div8 div9 div9";
+    gap: 10px;
+}
+
+
+.div1 { border: 1px #c0c0c0c0 solid; padding: 20px; border-radius: 10px; background-color: #fff;}
+.div2 { border: 1px #c0c0c0c0 solid; padding: 20px; border-radius: 10px; background-color: #fff;}
+.div3 { border: 1px #c0c0c0c0 solid; padding: 20px; border-radius: 10px; background-color: #fff;}
+.div4 { border: 1px #c0c0c0c0 solid; padding: 20px; border-radius: 10px; background-color: #fff;}
+.div5 { border: 1px #c0c0c0c0 solid; padding: 20px; border-radius: 10px; background-color: #fff;}
+.div6 { border: 1px #c0c0c0c0 solid; padding: 20px; border-radius: 10px; background-color: #fff;}
+.div7 { border: 1px #c0c0c0c0 solid; padding: 20px; border-radius: 10px; background-color: #fff;}
+.div8 { border: 1px #c0c0c0c0 solid; padding: 20px; border-radius: 10px; background-color: #fff;}
+.div9 { border: 1px #c0c0c0c0 solid; padding: 20px; border-radius: 10px; background-color: #fff;}
+
+.div1 {
+    grid-area: div1;
+    object-fit: contain;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.div2 {
+    grid-area: div2;
+    object-fit: contain;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.div3 {
+    grid-area: div3;
+    object-fit: contain;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.div4 {
+    grid-area: div4;
+    object-fit: contain;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.div5 {
+    grid-area: div5;
+    object-fit: contain;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.div6 {
+    grid-area: div6;
+    object-fit: contain;
+    overflow: hidden;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.div7 {
+    grid-area: div7;
+    object-fit: contain;
+    overflow: hidden;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.div8 {
+    grid-area: div8;
+    object-fit: contain;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.div9 {
+    grid-area: div9;
+    object-fit: contain;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.div6 > .content{
+    grid-column: 2;
+    grid-row: 1 / 2
+  
+}
+
+div > .content h2{
+    font-family: 'Roboto Flex';
+    font-weight: 400;
+    font-size: 40px;
+}
+div > .content  h4{
+    font-family: 'Roboto Flex';
+    font-weight: 400;
+    font-size: 16px;
+}
+
+div > .content span{
+    font-family: 'Roboto Flex';
+    font-weight: 400;
+    font-size: 16px;
+    color: #C52525;
+}
+
+
+div > .img-container img{
+    object-fit: contain;
+}
+
+
+@media  screen and (max-width: 768px) {
+    .parent {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:  250px  ;
+        grid-template-areas:
+            "div1 div1 div1 div1"
+            "div2 div2 div2 div2"
+            "div3 div3 div3 div3"
+            "div4 div4 div4 div4"
+            "div5 div5 div5 div5"
+            "div6 div6 div6 div6"
+            "div7 div7 div7 div7"
+            "div8 div8 div8 div8"
+            "div9 div9 div9 div9";
+            
+        gap: 10px;
+    }
+    .div1 {
+        grid-area: div1;
+        object-fit: contain;
+        overflow: hidden;
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+    }                        
+    .div2 {
+        grid-area: div2;
+        object-fit: contain;
+        overflow: hidden;
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+    }                        
+    .div3 {
+        grid-area: div3;
+        object-fit: contain;
+        overflow: hidden;
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+    }                        
+    .div4 {
+        grid-area: div4;
+        object-fit: contain;
+        overflow: hidden;
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+    }                        
+    .div5 {
+        grid-area: div5;
+        object-fit: contain;
+        overflow: hidden;
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+    }                        
+    .div5 {
+        grid-area: div5;
+        object-fit: contain;
+        overflow: hidden;
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+    }    
+    .div6 {
+        grid-area: div6;
+        object-fit: contain;
+        overflow: hidden;
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+    } 
+    .div6 > .content{
+        grid-column: 1;
+        grid-row: 1 / 2
+      
+    }
+                                              
+    .div7 {
+        grid-area: div7;
+        object-fit: contain;
+        overflow: hidden;
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+    }  
+    
+    .div8 {
+        grid-area: div8;
+        object-fit: contain;
+        overflow: hidden;
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+    }                        
+
+    .div9 {
+        grid-area: div9;
+        object-fit: contain;
+        overflow: hidden;
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+    }                        
+}

@@ -5,7 +5,7 @@ import { request } from "graphql-request"
 
 export const useGetQuery = (query, key, params) => {
 
-    const baseUrl = `https://api-eu-west-2.hygraph.com/v2/clutfv5mt12p107wb4eyawbgn/master`
+    const baseUrl = `https://api-eu-west-2.hygraph.com/v2/cluuox3gu0k1b07uwljj3mntl/master`
 
     const { data, isLoading, error } = useQuery ({
         queryKey: [key],
