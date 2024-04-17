@@ -1,7 +1,6 @@
 import React from 'react';
 import { getAllNews } from '../queries/getAllNews';
 import { useGetQuery } from '../hooks/useGetQuery';
-
 import { NavLink } from 'react-router-dom';
 
 export const Home = () => {
@@ -23,7 +22,6 @@ export const Home = () => {
         >
         <div className="content">
           <h2>{news.headline}</h2>
-          <h4>{news.underheadline}</h4>
           <span>D. {news.date}</span>
           <p className='line-clamp-1'>{news.markdown}</p>
           <NavLink to={`/details/${news.id}`}>læs mere</NavLink>

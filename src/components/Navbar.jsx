@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import { FaTimes } from "react-icons/fa";
 import { CiMenuBurger } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
     const [click, setClick] = useState(false);
 
 
     const content = (
-        <div className="absolute left-0 right-0 block w-full bg-white transition lg:hidden top-16 z-20">
+        <div className="absolute left-0 right-0 block w-full bg-white transition xl:hidden top-16 z-20">
             <ul className="p-20 text-xl text-center">
                 <Link to="/">
                     <li className="py-4 my-4 border-b cursor-pointer border-primary hover:border-primary">Alle</li>
@@ -53,7 +54,7 @@ const Navbar = () => {
             
             <div className="flex items-center space-x-4">
                 {/* User icon component */}
-                <div className="text-red-600"><FaUser /></div>
+                <div className="text-red-600"><NavLink to={`/login`}><FaUser /></NavLink></div>
 
                 {/* Menu toggle button for mobile */}
                 <button className="block transition xl:hidden text-primary" onClick={() => setClick(!click)} style={{ zIndex: 100 }}>

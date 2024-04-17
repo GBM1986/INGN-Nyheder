@@ -3,10 +3,10 @@ import React from 'react';
 
 function Footer () {
     return (
-        <footer class="bg-secondary w-h-full">
+        <footer class="bg-white w-h-full">
             <div class="max-w-screen-xl px-24 py-16 mx-auto sm:px-6 ">
                 <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-                    <div class=" grid grid-cols-2 gap-8 xs:grid-cols-1 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class=" grid grid-cols-1 gap-8 lg:col-span-4 sm:grid-cols-2 lg:grid-cols-4">
                         <div>
                         <h4 class="text-2xl font-extralight">
                             Adresse:
