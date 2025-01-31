@@ -3,6 +3,7 @@ import { getAllNews } from '../queries/getAllNews';
 import { useGetQuery } from '../hooks/useGetQuery';
 import { NavLink } from 'react-router-dom';
 
+
 export const Home = () => {
   const { data, isLoading, error } = useGetQuery(getAllNews, 'allNews');
 

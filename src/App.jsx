@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/wrapper";
 import React from "react";
+import Test from "./pages/Test";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/samfund" element={<Samfund />} />
         <Route path="/samfund/:id" element={<Samfund />} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/test" element={<Test/>} />
         {/* Dynamic route for news details */}
         <Route path="/details/:id" element={<NewsDetail />} />
       </Routes>
